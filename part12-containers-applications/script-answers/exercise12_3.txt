@@ -1,0 +1,4 @@
+cd /usr/src/app
+nano index.js
+"write console.log('Hello World')
+cat index.js
