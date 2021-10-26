@@ -6,7 +6,6 @@ const router = express.Router();
 router.get('/', async (_, res) => {
   const todos = await Todo.find({})
   console.log(todos)
-  console.log('aaa')
   res.send(todos);
 });
 
@@ -44,12 +43,10 @@ singleRouter.get('/', async (req, res) => {
 
 /* PUT todo. */
 singleRouter.put('/', async (req, res) => {
-  console.log('KYRPÄ!!!!')
   const newTodo = {
     text: req.todo.text,
     done: true
   }
-  console.log('TÄMÄ ', req.todo.id)
 
   try {
     const updatedTodo = await Todo.findByIdAndUpdate(req.todo.id, newTodo, {new: true})
