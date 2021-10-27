@@ -19,8 +19,12 @@ router.post('/', async (req, res) => {
     done: false
   })
   let nummer = await getAsync('added_todos')
-  nummer=parseInt(nummer)
-  nummer=nummer+1
+
+  if (nummer === null) {
+    nummer = 0
+  }
+  nummer = parseInt(nummer)
+  nummer = nummer+1
   console.log('luku ', nummer)
   await setAsync('added_todos', nummer)
 
