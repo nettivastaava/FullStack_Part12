@@ -1,6 +1,6 @@
 POST http://localhost:3000/todos
 
 {
-   "text": "Nanan!", "done": false
+   "text": "Howdy!!", "done": false
 }
 
