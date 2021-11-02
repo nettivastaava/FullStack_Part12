@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Todo = ({ todo, doneInfo, notDoneInfo }) => {
+  console.log('hello')
   
   return(
     <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '70%', margin: 'auto' }}>
